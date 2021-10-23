@@ -9,18 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.6.10",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@openzeppelin/contracts": "^4.2.0",
+    "@walletconnect/web3-provider": "^1.6.6",
     "axios": "^0.21.1",
     "chai": "^4.3.4",
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.4.1",
+    "framer-motion": "^4",
     "hardhat": "^2.4.1",
     "ipfs-http-client": "50.1.2",
+    "moralis": "^0.0.97",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-moralis": "^0.2.6",
+    "web3": "^1.6.0",
     "web3modal": "^1.9.3"
   },
   "devDependencies": {

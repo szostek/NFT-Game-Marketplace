@@ -3,6 +3,8 @@
 .secret
 .infuraid
 config.js
+kyleNotes.txt
+MoralisCloudFunctions.js
 
 # dependencies
 /node_modules

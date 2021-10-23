@@ -1,36 +1,25 @@
 import '../styles/globals.css'
-import Link from 'next/link'
+import { MoralisProvider } from 'react-moralis'
+import { ChakraProvider , extendTheme } from "@chakra-ui/react"
+import NavBar from '../components/navbar/navbar'
+
+const serverUrl = "https://mlnerjjrm3a6.usemoralis.com:2053/server"
+const appId = "07LAtr3qBfXDzDtAFEcJlyUmCnBV9BUQVBwxUSeT"
+
+const theme = extendTheme({
+  config: {
+    initialColorMode: 'light'
+  }
+})
 
 function Marketplace({ Component, pageProps }) {
   return (
-    <div>
-      <nav className="border-b p-6">
-        <p className="text-4xl font-bold">Metaverse Marketplace</p>
-        <div className="flex mt-4">
-          <Link href="/">
-            <a className="mr-4 text-pink-500">
-              Home
-            </a>
-          </Link>
-          <Link href="/create-item">
-            <a className="mr-6 text-pink-500">
-              Sell Digital Asset
-            </a>
-          </Link>
-          <Link href="/my-assets">
-            <a className="mr-6 text-pink-500">
-              My Digital Assets
-            </a>
-          </Link>
-          <Link href="/creator-dashboard">
-            <a className="mr-6 text-pink-500">
-              Creator Dashboard
-            </a>
-          </Link>
-        </div>
-      </nav>
-      <Component {...pageProps} />
-    </div>
+    <MoralisProvider appId={appId} serverUrl={serverUrl}>
+      <ChakraProvider  theme={theme}>
+        <NavBar/>
+        <Component {...pageProps} />
+      </ChakraProvider >
+    </MoralisProvider>
   )
 }
 

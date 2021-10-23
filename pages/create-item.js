@@ -33,6 +33,7 @@ export default function CreateItem() {
       console.log('Error uploading file: ', error)
     }  
   }
+  
   async function createMarket() {
     const { name, description, price } = formInput
     if (!name || !description || !price || !fileUrl) return
